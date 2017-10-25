@@ -68,7 +68,7 @@ class COCO:
         """
         # load dataset
         self.dataset = {}
-        self.anns = []
+        self.anns = {}
         self.imgToAnns = {}
         self.catToImgs = {}
         self.imgs = {}
@@ -231,6 +231,8 @@ class COCO:
             return [self.imgs[id] for id in ids]
         elif type(ids) == int:
             return [self.imgs[ids]]
+        elif type(ids) == unicode:
+            return [self.imgs[ids]]            
 
     def showAnns(self, anns):
         """

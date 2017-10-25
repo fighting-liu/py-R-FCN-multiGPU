@@ -831,6 +831,10 @@ message ROIPoolingParameter {
   // Multiplicative spatial scale factor to translate ROI coords from their
   // input scale to the scale used when pooling
   optional float spatial_scale = 3 [default = 1];
+  // params for roi-align
+  optional int32 bi_type = 4 [default = 0];
+  optional bool is_multi_interpolate = 5 [default = false];
+  optional float pad_ratio = 6 [default = 0];  
 }
 
 message PSROIPoolingParameter {

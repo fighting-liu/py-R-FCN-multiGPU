@@ -169,9 +169,9 @@ def get_training_roidb(imdb):
         imdb.append_flipped_images()
         print 'done'
 
-    print 'Preparing training data...'
-    rdl_roidb.prepare_roidb(imdb)
-    print 'done'
+    #print 'Preparing training data...'
+    #rdl_roidb.prepare_roidb(imdb)
+    #print 'done'
 
     return imdb.roidb
 
